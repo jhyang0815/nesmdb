@@ -82,7 +82,7 @@ def ndf_to_rawsco(ndf):
     ch_to_stimer[ch] = ch_to_timer[ch] + shifted
 
   # Extract musical transcript by emulating APU
-  for samp in xrange(nsamps):
+  for samp in range(nsamps):
     # Frame counter (in between samples)
     quarter_frame = False
     half_frame = False
@@ -285,7 +285,7 @@ def rawsco_to_ndf(rawsco):
   last_no_np = 0
   last_no_nl = 0
 
-  for i in xrange(max_i):
+  for i in range(max_i):
     for j, ch in enumerate(['p1', 'p2']):
       th, tl, volume, du = score[i, j]
       timer = (th << 8) + tl
