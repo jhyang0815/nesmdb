@@ -140,7 +140,7 @@ def midi_to_exprsco(midi):
     note = 0
     velocity = 0
     timbre = 0
-    for i in xrange(nsamps):
+    for i in range(nsamps):
       for comm in comms[i]:
         if comm[0] == 'note_on':
           note = comm[1]
